@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-family: "Inter", sans-serif;
+  background-color: black;
+  color: rgb(243, 240, 236);
+}
+
+.main-container {
+  background-color: #1c1938;
+  border-radius: 10px;
+
+  display: grid;
+  width: 1080px;
+  height: 446px;
+  margin: 10% auto 10%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.left-section {
+  padding: 70px;
+}
+
+.left-section > h1 {
+}
+
+.highlited-violet {
+  color: #a95dda;
+}
+
+.left-section > p {
+  padding: 35px 0;
+  line-height: 1.7rem;
+}
+
+.right-section {
+  background-color: #a95dda;
+  background-size: cover;
+  opacity: 0.8;
+  background-image: url("../images/image-header-desktop.jpg");
+  border-radius: 0 10px 10px 0;
+  -webkit-filter: sepia(100%) hue-rotate(270deg);
+}
+
+.left-section p {
+  font-size: 0.95rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.info-grid > div {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  line-height: 1.5rem;
+}
+
+.info-grid .bolder {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  letter-spacing: normal;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media all and (max-width: 1000px) {
+  .main-container {
+    border-radius: 10px;
+
+    width: 90%;
+    height: auto;
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 25rem 1fr;
+  }
+
+  .left-section {
+    order: 1;
+  }
+
+  .right-section {
+    order: 0;
+    background-image: url("../images/image-header-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    height: auto;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: stretch;
+    row-gap: 2rem;
+  }
+
+  .left-section > h1,
+  p {
+    text-align: center;
+  }
+
+  .info-grid-internal-row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    justify-content: stretch;
+  }
+}
