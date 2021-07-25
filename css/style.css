@@ -38,12 +38,11 @@ body {
 }
 
 .right-section {
-  background-color: #a95dda;
   background-size: cover;
-  opacity: 0.8;
+  background-color: #a95dda;
   background-image: url("../images/image-header-desktop.jpg");
   border-radius: 0 10px 10px 0;
-  -webkit-filter: sepia(100%) hue-rotate(270deg);
+  background-blend-mode: multiply;
 }
 
 .left-section p {
